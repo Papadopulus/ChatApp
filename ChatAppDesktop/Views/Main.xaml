@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="ChatAppDesktop.Views.Main"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ChatAppDesktop.ViewModels" xmlns:local1="clr-namespace:ChatAppDesktop.Views"
+             mc:Ignorable="d" 
+             MinHeight="300" MinWidth="300">
+    <UserControl.DataContext>
+        <local:MessageViewModel></local:MessageViewModel>
+    </UserControl.DataContext>
+    <Grid Background="Bisque" Loaded="Grid_Loaded">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="Chocolate">
+            <Label Name="Title" Content="Welcome to Chat App" HorizontalAlignment="Center" FontWeight="Bold" Foreground="White" FontSize="14"></Label>
+        </Grid>
+        <Grid Grid.Row="1" Margin="15" Background="#f8caa0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                
+            </Grid.ColumnDefinitions>
+            <ListBox Name="ListBox" ScrollViewer.CanContentScroll="False" Margin="5" ItemsSource="{Binding Users}" SelectionChanged="ListBox_SelectionChanged">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="40"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding Name}" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+                        </Grid>
+                    </DataTemplate>
+            </ListBox.ItemTemplate>
+            </ListBox>
+            <local1:ChatLayout x:Name="chatLayout" DataContext="{Binding}"  Visibility="Collapsed" Grid.Row="1" Grid.Column="2"></local1:ChatLayout>
+        </Grid>
+    </Grid>
+</UserControl>

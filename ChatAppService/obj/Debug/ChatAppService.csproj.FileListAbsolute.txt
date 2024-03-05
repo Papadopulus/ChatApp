@@ -1,0 +1,10 @@
+D:\Faculty of Electronic Engineering\Zastita Informacija\ChatAppService\obj\Debug\ChatAppService.csproj.CoreCompileInputs.cache
+D:\Faculty of Electronic Engineering\Zastita Informacija\ChatAppService\bin\Debug\ChatAppService.exe.config
+D:\Faculty of Electronic Engineering\Zastita Informacija\ChatAppService\bin\Debug\ChatAppService.exe
+D:\Faculty of Electronic Engineering\Zastita Informacija\ChatAppService\bin\Debug\ChatAppService.pdb
+D:\Faculty of Electronic Engineering\Zastita Informacija\ChatAppService\obj\Debug\ChatAppService.csproj.AssemblyReference.cache
+D:\Faculty of Electronic Engineering\Zastita Informacija\ChatAppService\obj\Debug\ChatAppService.csproj.CopyComplete
+D:\Faculty of Electronic Engineering\Zastita Informacija\ChatAppService\obj\Debug\ChatAppService.exe
+D:\Faculty of Electronic Engineering\Zastita Informacija\ChatAppService\obj\Debug\ChatAppService.pdb
+D:\Faculty of Electronic Engineering\Zastita Informacija\ChatAppService\bin\Debug\ChatAppContracts.dll
+D:\Faculty of Electronic Engineering\Zastita Informacija\ChatAppService\bin\Debug\ChatAppContracts.pdb

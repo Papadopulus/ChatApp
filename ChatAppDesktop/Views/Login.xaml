@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="ChatAppDesktop.Views.Login"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ChatAppDesktop.Views"
+             mc:Ignorable="d" 
+             MinHeight="420" MinWidth="540" Width="388">
+    <Grid Background="Bisque">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Vertical" Margin="0,94,0,0" Width="230" Height="67">
+            <Label Content="Please enter your username:" HorizontalAlignment="Center" FontWeight="Bold" FontSize="14" Height="30" Margin="17,0,17.038,0"></Label>
+            <TextBox x:Name="Username" HorizontalAlignment="Center" Height="23" TextAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="210" Margin="10,0,10.038,0"></TextBox>
+        </StackPanel>
+        <!--<StackPanel Orientation="Vertical" Margin="155,305,155,10">
+            <Label Content="Please enter your key:" HorizontalAlignment="Center" FontWeight="Bold" FontSize="14"></Label>
+
+            <xctk:IntegerUpDown x:Name="Key" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" 
+                    Width="210" 
+                    Height="25" 
+                    Margin="10,10,10.038,0"
+                    AllowSpin="True"
+                                Watermark="Enter your key"/>
+            <Button Name="LoginButton"  Content="Login" Width="100" Height="25" Background="Chocolate" Foreground="white" HorizontalAlignment="Right" Margin="0,10,17.038,0" Click="LoginButton_Click"></Button>
+        </StackPanel>-->
+        <StackPanel Orientation="Vertical" Margin="0,190,0,31">
+            <Label Content="Select the algorithm you want to use:" FontWeight="Bold" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Top" Width="257"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <RadioButton Content="Double Transposition" FontWeight="Bold" FontSize="12" GroupName="AlgorithmGroup" Margin="5" Checked="AlgorithmRadioButton_Checked"/>
+                <RadioButton Content="A5/2" GroupName="AlgorithmGroup" FontWeight="Bold" FontSize="12" Margin="5" Checked="AlgorithmRadioButton_Checked"/>
+
+            </StackPanel>
+
+            <StackPanel x:Name="DoubleTranspositionPanel" Visibility="Collapsed">
+                <Label Content="Please enter your key:" HorizontalAlignment="Center" FontWeight="Bold" FontSize="14"/>
+                <xctk:IntegerUpDown x:Name="Key" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" 
+                    Width="210" 
+                    Height="25" 
+                    Margin="10,10,10.038,0"
+                    AllowSpin="True"
+                    Watermark="Enter your key"/>
+            </StackPanel>
+
+            <!-- Drugi set elemenata za A5/2 -->
+            <StackPanel x:Name="A52Panel" Visibility="Collapsed">
+                <Label Content="Please enter 8 caracter as your key:" HorizontalAlignment="Center" FontWeight="Bold" FontSize="14"/>
+                <TextBox x:Name="A52Key" MaxLength="8" HorizontalAlignment="Center" Height="23" TextAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="210" Margin="10,0,10.038,0"/>
+            </StackPanel>
+            
+        </StackPanel>
+        <Button x:Name="LoginButton"  Content="Login" Visibility="Collapsed" Width="100" Height="25" Background="Chocolate" Foreground="white" Click="LoginButton_Click" Margin="285,340,155,55"/>
+    </Grid>
+</UserControl>
